@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
     <title>Przychodnia</title>
 </head>
 <body>
-    <h1>Witamy w naszej internetowej przychodni!</h1>
+    <div th:replace="template.html :: menu"></div>
+
+    <form method="post">
+        <p class="pole">Podaj swoje imię</p>
+        <input type="text" placeholder="Imię">
+        <p class="pole">Podaj swoje nazwisko</p>
+        <input type="text" placeholder="Nazwisko">
+        <p class="pole">Podaj termin wizyty</p>
+        <input type="date" placeholder="Imię"><br/>
+        <input type="submit" value="Zarezerwuj wizytę">
+    </form>
 </body>
 </html>
