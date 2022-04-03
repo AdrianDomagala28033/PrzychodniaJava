@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Logowanie</title>
+  <link rel="stylesheet" href="/Style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+<div th:replace="template.html :: menu"></div>
+
+<form method="post">
+  <p class="pole">Login</p>
+  <input type="text" placeholder="Imię" name="login">
+  <p class="pole">Hasło</p>
+  <input type="password" placeholder="Hasło" name="password"><br><br>
+  <input type="submit">
+</form>
+</body>
+</html>

@@ -1,33 +1,28 @@
 package com.example.demo.model;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
 public class Uzytkownik {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
     private String imie;
     private String nazwisko;
     private String login;
     private String haslo;
+    @OneToMany(mappedBy = "uzytkownik", fetch = FetchType.EAGER)
+    private List<Wizyty> wizyty;
 
-
-    public Uzytkownik(int id, String imie, String nazwisko, String login, String haslo) {
-        this.id = id;
-        this.imie = imie;
-        this.nazwisko = nazwisko;
-        this.login = login;
-        this.haslo = haslo;
-    }
-
-
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

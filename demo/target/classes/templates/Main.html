@@ -11,14 +11,15 @@
 <body>
     <div th:replace="template.html :: menu"></div>
 
-    <form method="post">
+    <form method="post" >
         <p class="pole">Podaj swoje imię</p>
-        <input type="text" placeholder="Imię">
+        <input type="text" placeholder="Imię" name="imieUzytkownika">
         <p class="pole">Podaj swoje nazwisko</p>
-        <input type="text" placeholder="Nazwisko">
+        <input type="text" placeholder="Nazwisko" name="nazwiskoUzytkownika">
         <p class="pole">Podaj termin wizyty</p>
-        <input type="date" placeholder="Imię"><br/>
-        <input type="submit" value="Zarezerwuj wizytę">
+        <input type="date" name="dataWizyty"><br/>
+        <input type="submit" value="Zarezerwuj wizytę" name="guzikRezerwacji">
     </form>
+
 </body>
 </html>
